@@ -61,8 +61,6 @@ install_theme() {
     echo "1. stellar"
     echo "2. billing"
     echo "3. enigma"
-    echo "4. elsium"
-    echo "5. nebula"
     echo "x. kembali"
     echo -e "masukan pilihan (1/2/3/x) :"
     read -r SELECT_THEME
@@ -79,14 +77,6 @@ install_theme() {
         THEME_URL=$(echo -e "https://github.com/LeXcZxMoDz9/Installerlex/raw/main/C3.zip")
         break
         ;; 
-      4)
-        THEME_URL=$(echo -e "https://github.com/LeXcZxMoDz9/Installerlex/raw/main/C5.zip")
-        break
-        ;;
-      5)
-        THEME_URL=$(echo -e "https://github.com/LeXcZxMoDz9/Installerlex/raw/main/C4.zip")
-        break
-        ;;
       x)
         return
         ;;
@@ -156,32 +146,6 @@ elif [ "$SELECT_THEME" -eq 2 ]; then
   sleep 2
   clear
   return
-  
-  if [ "$SELECT_THEME" -eq 4 ]; then
-  echo -e "                                                       "
-  echo -e "${BLUE}[+] =============================================== [+]${NC}"
-  echo -e "${BLUE}[+]                  INSTALLASI THEMA               [+]${NC}"
-  echo -e "${BLUE}[+] =============================================== [+]${NC}"
-  echo -e "                                                                   "
-  sudo cp -rfT /root/pterodactyl /var/www/pterodactyl
-  curl -sL https://deb.nodesource.com/setup_16.x | sudo -E bash -
-  sudo apt update
-  sudo apt install -y nodejs
-  sudo npm i -g yarn
-  cd /var/www/pterodactyl
-  yarn
-  yarn build:production
-  php artisan migrate
-  php artisan view:clear
-
-  echo -e "                                                       "
-  echo -e "${GREEN}[+] =============================================== [+]${NC}"
-  echo -e "${GREEN}[+]                   INSTALL SUCCESS               [+]${NC}"
-  echo -e "${GREEN}[+] =============================================== [+]${NC}"
-  echo -e ""
-  sleep 2
-  clear
-  exit 0
 
 elif [ "$SELECT_THEME" -eq 3 ]; then
   echo -e "                                                       "
