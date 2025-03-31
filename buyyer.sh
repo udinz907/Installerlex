@@ -368,9 +368,3 @@ echo -e "${CYAN}============================================================${RE
         echo -e "${RED}Pilihan tidak valid.${RESET}"
 
         ;;
-esac
-sleep 5
-echo "Pilih opsi:"
-echo "1) keluar"
-echo "2) Keluar"
-read -p "Masukkan pilihan (1/2): " pilihan
