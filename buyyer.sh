@@ -17,6 +17,7 @@ DARK_BLUE='\033[0;94m'
 DARK_GREEN='\033[0;32m'
 GRAY='\033[1;90m'
 TEAL='\033[0;96m'
+apt install lolcat -y
 if command -v lolcat > /dev/null 2>&1; then
             echo -e "${GREEN}[✓] Depends Installed${RESET}"
 else
@@ -373,13 +374,3 @@ echo "Pilih opsi:"
 echo "1) keluar"
 echo "2) Keluar"
 read -p "Masukkan pilihan (1/2): " pilihan
-
-if [ "$pilihan" -eq 1 ]; then
-exit 1
-elif [ "$pilihan" -eq 2 ]; then
-    echo "Keluar..."
-    exit 1
-else
-    echo "Pilihan tidak valid, keluar..."
-    exit 1
-fi
