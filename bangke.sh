@@ -422,22 +422,7 @@ fi
 
 if [ -f "$BLUEPRINT_PATH" ]; then
     echo "Blueprint sudah terpasang. Melanjutkan instalasi tema."
-    cd /root
-    cd /var/www
-
-    git clone $REPO_URL
-
-    cd "$TEMP_DIR"
-    mv * /var/www  
-    
-    cd
-    cd /var/www
-    unzip nebulaptero.zip
-
-    cd /var/www/pterodactyl
-    blueprint -install nebula
-
-    show_progress "NEBULA THEME BERHASIL DI INSTALL"
+    rm -rf "$BLUEPRINT_PATH"
 else
     echo "Blueprint belum terpasang. Memulai proses instalasi Blueprint dan dependensi."
 
