@@ -328,11 +328,11 @@ cd /var/www/pterodactyl || { echo "Direktori tidak ditemukan"; exit 1; }
 # Membuat lokasi baru
 php artisan p:user:make <<EOF
 yes
-lexcz@lexcz.xyz
-lexcz
-lexcz
-lexcz
-lexcz
+gustafhosting@gustaf.id
+gustafhosting
+gustafhosting
+gustafhosting
+gustafhosting
 EOF
   echo -e "                                                       "
   echo -e "${GREEN}[+] =============================================== [+]${NC}"
